@@ -647,3 +647,31 @@ a.member:hover .soc{background:var(--brass);color:var(--ink)}
 .foot__word{font-size:5.7vw}
 @media (max-width:620px){.foot__word{font-size:5.6vw}}
 .grid .g,.grid .g--tall{aspect-ratio:4/5}
+/* v30 */
+.nav{top:calc(var(--faixa,0px) + 12px)}
+.brand{padding:4px 14px 4px 6px;gap:10px}
+.brand__mark{width:36px;height:36px}
+.brand__txt{gap:4px}.brand__txt b{font-size:14px}.brand__txt small{font-size:7.5px}
+.nav__pill{padding:4px}.nav__pill a{padding:9px 15px;font-size:12.5px}
+.ico,.burger{width:40px;height:40px}
+.nav__cta{height:40px;padding:0 18px;font-size:11.5px}
+.burger i{left:12px;right:12px}
+.hero__shell{padding-top:clamp(84px,10vh,104px)}
+.equipe{padding-top:clamp(60px,7vw,100px);padding-bottom:clamp(60px,7vw,100px)}
+.equipe__head{margin-bottom:clamp(28px,3.5vw,48px)}
+.equipe__head .h2{font-size:clamp(44px,6vw,96px)}
+.equipe__head p{display:none}
+.works__head .h2{font-size:clamp(44px,6.4vw,110px)}
+.hero__figure canvas,.hero__figure .hero__fallback{transition:transform .7s var(--ease);transform-origin:50% 100%}
+.hero__figure:hover canvas,.hero__figure:hover .hero__fallback{transform:translateY(-8px) scale(1.035)}
+@media (max-width:620px){.hero__stats .stats{grid-template-columns:repeat(2,auto);justify-content:start;gap:28px}}
+/* v31 */
+.works__head .h2,.equipe__head .h2{text-wrap:balance}
+.servicos--home{padding-top:clamp(60px,7vw,110px);padding-bottom:clamp(60px,7vw,110px)}
+.ritual{padding-bottom:clamp(56px,6vw,90px)}
+@media (max-width:620px){
+  .hero__h1-wrap .kicker{font-size:9px;letter-spacing:.16em;gap:8px;white-space:nowrap}
+  .hero__h1-wrap .kicker::before{width:18px}
+  .works__head .h2{font-size:clamp(40px,13vw,64px)}
+  .visit__photo{max-height:62vh}
+}

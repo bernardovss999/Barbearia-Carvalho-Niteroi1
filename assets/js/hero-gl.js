@@ -69,10 +69,10 @@
   };
   addEventListener('resize', resize);
 
-  const mouse = { x: .6, y: .4, tx: .6, ty: .4 }; let hov = 0, hovT = reduce ? 0 : .35;
+  const mouse = { x: .6, y: .4, tx: .6, ty: .4 }; let hov = 0, hovT = 0;
   const hero = document.querySelector('.hero');
-  hero.addEventListener('pointermove', e => { const r = canvas.getBoundingClientRect(); mouse.tx = (e.clientX - r.left) / r.width; mouse.ty = (e.clientY - r.top) / r.height; hovT = 1; });
-  hero.addEventListener('pointerleave', () => { hovT = .35; });
+  hero.addEventListener('pointermove', e => { const r = canvas.getBoundingClientRect(); mouse.tx = (e.clientX - r.left) / r.width; mouse.ty = (e.clientY - r.top) / r.height; });
+  
 
   let visible = true;
   new IntersectionObserver(([e]) => visible = e.isIntersecting).observe(fig);

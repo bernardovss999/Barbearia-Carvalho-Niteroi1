@@ -70,11 +70,12 @@
   const setFaixa = y => document.documentElement.style.setProperty('--faixa', Math.max(0, faixaH() - y) + 'px');
   setFaixa(0); addEventListener('resize', () => setFaixa(scrollY));
   lenis.on('scroll', ({ scroll }) => setFaixa(scroll));
-  const mbar = $('.mbar'); let lastY = 0;
+  const mbar = $('.mbar'); let lastY = 0, heroEnd = 0;
+  const hEl = $('.hero'); const mHero = () => heroEnd = hEl ? hEl.offsetTop + hEl.offsetHeight - innerHeight * .4 : 0; mHero(); addEventListener('resize', mHero); addEventListener('load', mHero);
   lenis.on('scroll', ({ scroll }) => {
     nav.classList.toggle('is-solid', scroll > 30);
     if (scroll > lastY + 3 && scroll > 500) nav.classList.add('is-hidden'); else if (scroll < lastY - 3) nav.classList.remove('is-hidden');
-    mbar && mbar.classList.toggle('is-on', scroll > innerHeight * .7);
+    mbar && mbar.classList.toggle('is-on', scroll > (heroEnd || innerHeight * .7));
     lastY = scroll;
   });
 
